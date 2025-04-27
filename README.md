@@ -12,8 +12,24 @@ Write a C program to print even numbers ranging from M to N (including M and N v
 7.	Continue the loop until you have iterated through all numbers from M to N.
 
 ## PROGRAM:
+```
+#include <stdio.h>
+int main() {
+    int M, N, i;
+    scanf("%d %d", &M, &N);
+    for (i = M; i <= N; i++) {
+        if (i % 2 == 0)
+            printf("%d ", i);
+    }
+    return 0;
+}
+```
 
 ## OUTPUT:
+```
+Input: 3 10
+Output: 4 6 8 10
+```
 
 
 
@@ -45,9 +61,32 @@ Write a C program to print the given triangular pattern using loop.
 5.	Continue the loop until you have printed the entire triangular pattern.
 
 ## PROGRAM:
+```
+#include <stdio.h>
+int main() {
+    int rows, i, j;
+    scanf("%d", &rows);
+    for (i = 1; i <= rows; i++) {
+        for (j = 1; j <= i; j++) {
+            printf("* ");
+        }
+        printf("\n");
+    }
+    return 0;
+}
+```
 
 
 ## OUTPUT:
+```
+Input: 5
+Output:
+* 
+* * 
+* * * 
+* * * * 
+* * * * * 
+```
 
 
 
@@ -74,9 +113,31 @@ Write a C program to perform addition and subtraction of two numbers using funct
 4.	Call the addition and subtraction functions, passing the two numbers as arguments.
 
 ## PROGRAM:
+```
+#include <stdio.h>
+void add(int a, int b) {
+    printf("Addition: %d\n", a + b);
+}
+void subtract(int a, int b) {
+    printf("Subtraction: %d\n", a - b);
+}
+int main() {
+    int x, y;
+    scanf("%d %d", &x, &y);
+    add(x, y);
+    subtract(x, y);
+    return 0;
+}
+```
 
 
 ## OUTPUT:
+```
+Input: 7 4
+Output:
+Addition: 11
+Subtraction: 3
+```
 
 
 
@@ -106,9 +167,27 @@ Write a c program to find the sum of odd digits using for loop
 6.	Print the sum of odd digits.
 
 ## PROGRAM:
+```
+#include <stdio.h>
+int main() {
+    int num, digit, sum = 0;
+    scanf("%d", &num);
+    for (; num > 0; num /= 10) {
+        digit = num % 10;
+        if (digit % 2 != 0)
+            sum += digit;
+    }
+    printf("Sum of odd digits: %d\n", sum);
+    return 0;
+}
+```
 
 
 ## OUTPUT:
+```
+Input: 12345
+Output: Sum of odd digits: 9
+```
 
 
 
@@ -136,9 +215,28 @@ d.	After the loop, print the factorial value.
 5.	End
 
 ## PROGRAM:
+```
+#include <stdio.h>
+void fact() {
+    int i, N, f = 1;
+    scanf("%d", &N);
+    for (i = 1; i <= N; i++) {
+        f *= i;
+    }
+    printf("Factorial: %d\n", f);
+}
+int main() {
+    fact();
+    return 0;
+}
+```
 
 
 ## OUTPUT:
+```
+Input: 5
+Output: Factorial: 120
+```
 
 ## RESULT:
 The program correctly computes the factorial of a given number using a separate function and displays the result.
